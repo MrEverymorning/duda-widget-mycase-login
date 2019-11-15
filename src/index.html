@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>MyCase Duda Login</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="element">
+			<!-- START DUDA WIDGET -->
+			<a id="mycase-login-btn" class="mycase-btn" href="#">Client Login</a>
+			<div id="modal">
+				<div class="modal-overlay"></div>
+				<div id="mycase-login-modal">
+					<div id="mycase-login-title">
+						<h3>Client Login</h3>
+						<a id="close-modal" href="#">&#215;</a>
+					</div>
+					<div id="mycase-login-form" data-firm-id="{{firm_uuid}}"></div>
+					<a class="forgot" href="https://login.mycase.com/login_sessions/new?response_type=code">Forgot Password?</a>
+				</div>
+			</div>
+			<!-- END DUDA WIDGET -->
+		</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="scripts.js"></script>
+	</body>
+</html>
