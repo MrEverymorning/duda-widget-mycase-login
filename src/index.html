@@ -10,15 +10,19 @@
 	<body>
 		<div id="element">
 			<!-- START DUDA WIDGET -->
-			<a id="mycase-login-btn" class="mycase-btn" href="#">Client Login</a>
+			<a id="mycase-login-btn-link" href="#">
+				<div id="mycase-login-btn" class="mycase-btn dmWidget fullSizeButton">
+					<span class="text">{{loginButtonText}}</span>
+				</div></a
+			>
 			<div id="modal">
 				<div class="modal-overlay"></div>
 				<div id="mycase-login-modal">
 					<div id="mycase-login-title">
-						<h3>Client Login</h3>
+						<h3>{{loginButtonText}}</h3>
 						<a id="close-modal" href="#">&#215;</a>
 					</div>
-					<div id="mycase-login-form" data-firm-id="{{firm_uuid}}"></div>
+					<div id="mycase-login-form"></div>
 					<a class="forgot" href="https://login.mycase.com/login_sessions/new?response_type=code">Forgot Password?</a>
 				</div>
 			</div>

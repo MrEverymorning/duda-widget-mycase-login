@@ -8,10 +8,10 @@ body {
 	padding: 0;
 	color: #000;
 	font-family: Arial, Helvetica, sans-serif;
+	height: 200vh;
 }
 
-#mycase-login-btn,
-#login-button input {
+#mycase-login-btn {
 	background: #ff6341;
 }
 
@@ -51,16 +51,12 @@ body {
 
 .modal-overlay {
 	position: fixed;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	z-index: -1;
-}
-
-.body-fix {
-	overflow-y: hidden !important;
 }
 
 #mycase-login-modal {
@@ -74,13 +70,16 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	overflow-y: auto;
+	line-height: 1;
+	animation: slideDown 0.5s forwards;
 }
 
 #mycase-login-title {
-	background: #111;
-	padding: 10px;
+	background: #2a3439;
+	padding: 15px;
 	display: flex;
 	align-items: center;
+	border-top: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 #mycase-login-title h3 {
@@ -89,10 +88,12 @@ body {
 	flex-grow: 1;
 	color: #eee !important;
 	font-weight: normal;
+	line-height: 1;
 }
 
 a#close-modal {
-	color: #666;
+	color: #fff;
+	opacity: 0.6;
 	background: 0;
 	border: 0;
 	font-size: 25px;
@@ -100,11 +101,12 @@ a#close-modal {
 	transition: 0.2s;
 	padding: 0;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 a#close-modal:hover {
 	cursor: pointer;
-	color: #aaa;
+	opacity: 1;
 }
 
 #mycase-login-form {
@@ -159,9 +161,15 @@ a#close-modal:hover {
 	font-size: 16px;
 	color: #fff;
 	border: 0;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
 	height: 35px !important;
+	line-height: 35px;
 	width: 100px;
 	transition: 0.2s;
+	background: #2a3439;
+	border-radius: 3px;
 }
 
 #login-button input:hover {
@@ -189,5 +197,16 @@ a.forgot:hover {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		margin-top: -50px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0;
 	}
 }

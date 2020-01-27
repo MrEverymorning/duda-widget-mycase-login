@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "parcel build ./src/duda.js ./src/duda.css --no-source-maps",
-		"dev": "parcel ./src/index.html --open --no-source-maps"
+		"dev": "parcel ./src/index.html -d dev --no-source-maps"
 	},
 	"repository": {
 		"type": "git",
@@ -20,5 +20,8 @@
 	"homepage": "https://github.com/markprictor/mycase-duda-login#readme",
 	"devDependencies": {
 		"cssnano": "^4.1.10"
+	},
+	"dependencies": {
+		"body-scroll-lock": "^2.6.4"
 	}
 }
