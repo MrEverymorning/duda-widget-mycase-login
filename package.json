@@ -22,6 +22,6 @@
 		"cssnano": "^4.1.10"
 	},
 	"dependencies": {
-		"body-scroll-lock": "^2.6.4"
+		"body-scroll-lock": "^2.7.1"
 	}
 }

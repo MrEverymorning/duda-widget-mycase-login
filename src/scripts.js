@@ -17,33 +17,31 @@ getFirmUUID();
 
 //Get Firm UUID
 function getFirmUUID() {
-	let firmUUID = data.config.firm_uuid.includes('<p class="rteBlock">') ? jQuery(data.config.firm_uuid).text() : data.config.firm_uuid;
+	const firmUUID = data.config.firm_uuid.includes('<p class="rteBlock">') ? jQuery(data.config.firm_uuid).text() : data.config.firm_uuid;
 	$.getScript('https://login.mycase.com/customer_websites/login_javascript.js').done(() => {
 		$('#mycase-login-form').attr('data-firm-id', firmUUID);
 	});
 }
 
-//Show Modal
+//Show modal function
 function showModal() {
-	$('#modal')
-		.addClass('show-modal')
-		.appendTo($('body'));
+	$('#modal').addClass('show-modal').appendTo($('body'));
 	disableBodyScroll(document.querySelector('#modal'));
 }
 
-//Close Modal
+//Close modal function
 function closeModal() {
 	$('#modal').removeClass('show-modal');
 	enableBodyScroll(document.querySelector('#modal'));
 }
 
-//Show modal on contact us button click
+//Show modal events
 $(document).on('click', '#mycase-login-btn', e => {
 	e.preventDefault();
 	showModal();
 });
 
-//Close modal
+//Close modal events
 $(document).on('click', '#close-modal', e => {
 	e.preventDefault();
 	closeModal();
@@ -51,4 +49,10 @@ $(document).on('click', '#close-modal', e => {
 
 $(document).on('click', '.modal-overlay', () => {
 	closeModal();
+});
+
+$(document).on('keyup', '#modal', e => {
+	if (e.key === 'Escape') {
+		closeModal();
+	}
 });
